@@ -13,10 +13,17 @@ class GameScene: SKScene {
     
     var nextLevelButton:SKLabelNode!
     
+    // sprites
+    var leg:SKNode!
+    
     
     override func didMove(to view: SKView) {
         print("This is level 1")
         self.nextLevelButton = self.childNode(withName: "nextLevelButton") as! SKLabelNode
+        
+        // get the sprites from SceneKit Editor
+        self.leg = self.childNode(withName: "leg")
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
